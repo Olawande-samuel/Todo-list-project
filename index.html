@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/4c08e80b7b.js"></script>
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+  <div class="container">
+    <img id="headerImg" src="./images/bg-desktop-dark.jpg" alt="dark background image" class="header-img">
+    <div class="todo-container">
+        <div class="header-container">
+          <h2 class="header">Todo</h2>
+          <div class="theme-toggle">
+            <img id="themeImage" src="./images/icon-sun.svg" alt="image of the sun">
+          </div>
+        </div>
+
+        <form>
+          <input type="text" name="todo-list" id="todoEntry" class="todo-entry" placeholder="Enter tasks here">
+          <button class="btn"><i class="fas fa-plus"></i></button>
+        </form>
+      
+        <div class="list-container">
+          <ul class="todo-list"></ul>
+        </div>
+
+        <div class="foot-list">
+           <p><!-- Add dynamic number --> <span class="remainder">0</span> items left</p> 
+            
+           <div class="filter-container">
+             <form class="filter-list">
+               <input type="button" value="all" class="all">
+               <input type="button" value="active" class="active">
+               <input type="button" value="completed" class="completed">
+             </form>
+           </div>
+          <!-- <div class="filter-list">
+            <select name="todos" class="filter-todo">
+              <option value="all">All</option>
+              <option value="completed">Completed</option>
+              <option value="uncompleted">Uncompleted</option>
+            </select> -->
+         <p class="last-item">Clear Completed</p>
+            
+            
+        </div>
+
+
+        <p class="footer-content">Drag and drop to reorder list</p>
+      </div> <!--todo container-->
+
+  </div> <!--container div-->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Olawande</a>.
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

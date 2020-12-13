@@ -1,0 +1,259 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: hsl(235, 21%, 11%);
+	transition: background 1s ease-in-out;
+
+	.header-img {
+		width: 100%;
+		height: 30%;
+	}
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+
+	.theme-toggle {
+		cursor: pointer;
+
+		#themeImage {
+			pointer-events: none;
+		}
+	}
+}
+
+.header {
+	color: white;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+}
+.todo-container {
+	min-width: 50%;
+	max-width: 50%;
+	margin: auto;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -20%);
+}
+
+.todo-entry {
+	display: block;
+	background: hsl(235, 24%, 19%);
+	outline: none;
+	border: none;
+	padding: 0 20px;
+	color: white;
+	transition: background 1s ease-in-out;
+}
+
+.btn {
+	padding: 8px 8px;
+	background: hsl(235, 24%, 19%);
+	border: none;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	transition: all 0.5s ease;
+
+	&:hover {
+		background: white;
+		color: hsl(235, 24%, 19%);
+	}
+}
+.todo-entry {
+	width: 100%;
+	height: 40px;
+}
+
+form {
+	display: flex;
+}
+
+.list-container {
+	margin-top: 20px;
+	color: hsl(233, 14%, 35%);
+}
+.foot-list {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	font-size: 11px;
+	background: hsl(235, 24%, 19%);
+	padding: 8px 10px;
+	border-radius: 4px;
+	color: hsl(233, 14%, 35%);
+	transition: background 1s ease-in-out;
+
+	.last-item {
+		cursor: pointer;
+
+		&:hover {
+			color: hsl(236, 33%, 92%);
+		}
+	}
+}
+.footer-content {
+	text-align: center;
+	color: hsl(233, 14%, 35%);
+	font-size: 11px;
+	margin-top: 30px;
+}
+
+.filter-list,
+ul {
+	list-style: none;
+	display: flex;
+
+	li {
+		margin: 0 5px;
+		cursor: pointer;
+	}
+}
+
+.filter-list input {
+	background: none;
+	color: hsl(233, 14%, 35%);
+	border: none;
+	outline: none;
+	margin-right: 5px;
+	font-size: 11px;
+	cursor: pointer;
+	text-transform: capitalize;
+
+	&:last-child {
+		margin-right: 0;
+	}
+	&:hover {
+		color: hsl(236, 33%, 92%);
+	}
+	
+}
+
+.highlight {
+	color: hsl(192, 100%, 67%) !important;
+}
+.todo-list {
+	display: block;
+	border-radius: 4px;
+}
+
+.todo {
+	width: 100%;
+	background: hsl(235, 24%, 19%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 10px;
+	font-size: 16px;
+	border-bottom: 1px solid grey;
+	transition: background 1s ease-in-out;
+}
+
+.delete-btn,
+.check-btn {
+	background: hsl(235, 24%, 19%);
+	border: none;
+	outline: none;
+	padding: 2px 4px;
+	cursor: pointer;
+}
+
+.check-btn {
+	background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+	position: relative;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	vertical-align: middle;
+	border: 1px solid black;
+}
+
+.individual-todo {
+	display: inline-block;
+}
+.delete-btn img {
+	width: 15px;
+	height: 15px;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+.delete-btn img,
+.check-btn img {
+	pointer-events: none;
+}
+
+.todo:hover .delete-btn img {
+	opacity: 1;
+}
+
+.complete {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+.highlight {
+	color: hsl(220, 98%, 61%);
+}
+// LIGHT THEME STYLES
+
+.light-theme {
+	background: white;
+}
+.light-theme .container,
+.light-theme .todo-entry,
+.light-theme .todo,
+.light-theme .foot-list,
+.light-theme .delete-btn,
+.light-theme .btn {
+	background: white;
+}
+.light-theme .btn {
+	color: hsl(233, 14%, 35%);
+
+	&:hover {
+		background: hsl(220, 98%, 61%);
+	}
+}
+.light-theme .filter-list input:hover {
+	color: hsl(220, 98%, 61%);
+}
+.light-theme .foot-list .last-item:hover {
+	color: hsl(220, 98%, 61%);
+}
+
+@media screen and (max-width: 605px) {
+	.filter-container {
+		position: absolute;
+		top: 150%;
+		left: 50%;
+		width: 100%;
+		transform: translateX(-50%);
+		background: hsl(235, 24%, 19%);
+		border-radius: 4px;
+		padding: 8px 10px;
+
+		.filter-list {
+			width: 50%;
+			margin: auto;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.footer-content {
+		margin-top: 50px;
+	}
+}
+
