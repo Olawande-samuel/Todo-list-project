@@ -14,6 +14,14 @@ const body = document.querySelector('body');
 const all = document.querySelector('.all');
 const active = document.querySelector('.active');
 const completed = document.querySelector('.completed');
+const darkThemeImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-dark.jpg?raw=true";
+const lightThemeImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-light.jpg?raw=true";
+const moon = "https://raw.githubusercontent.com/Olawande-samuel/Todo-list-project/a3fb87b7204b481ef48ff27a963ee263768bedfd/images/icon-moon.svg";
+const sun = "https://raw.githubusercontent.com/Olawande-samuel/Todo-list-project/a3fb87b7204b481ef48ff27a963ee263768bedfd/images/icon-sun.svg";
+const mobileLightImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-mobile-light.jpg?raw=true";
+const mobileDarkImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-mobile-dark.jpg?raw=true";
+const bgdDarkImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-dark.jpg?raw=true";
+const bgdLightImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-light.jpg?raw=true";
 
 //ADD EVENTS
 button.addEventListener('click', addTodo);
@@ -166,14 +174,11 @@ function updateTotal() {
 function changeThemes(){
     // change header image
     const headerImg = document.querySelector('.header-img');
-    const darkThemeImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-dark.jpg?raw=true";
-    const lightThemeImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-light.jpg?raw=true";
     headerImg.src = (headerImg.src === darkThemeImage)? lightThemeImage : darkThemeImage;
     
     // toggle switch icon
     const themeimg = document.querySelector('#themeImage');
-    const moon = "https://raw.githubusercontent.com/Olawande-samuel/Todo-list-project/a3fb87b7204b481ef48ff27a963ee263768bedfd/images/icon-moon.svg";
-    const sun = "https://raw.githubusercontent.com/Olawande-samuel/Todo-list-project/a3fb87b7204b481ef48ff27a963ee263768bedfd/images/icon-sun.svg";
+    
     themeimg.src = (themeimg.src === sun)? moon : sun;
 
     // add light-theme class to HTML body
@@ -187,10 +192,7 @@ function changeThemes(){
 function changeImageOnResize() {
     
     const headerImg = document.querySelector('.header-img');
-    const mobileLightImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-mobile-light.jpg?raw=true";
-    const mobileDarkImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-mobile-dark.jpg?raw=true";
-    const bgdDarkImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-dark.jpg?raw=true";
-    const bgdLightImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-light.jpg?raw=true";
+    
     
 
     if(windowWidth < 375 && body.classList.contains('light-theme')) {

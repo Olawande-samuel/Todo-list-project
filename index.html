@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://use.fontawesome.com/27cac15b3e.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <script src="https://use.fontawesome.com/4c08e80b7b.js"></script>
   <title>Frontend Mentor | Todo app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -18,18 +18,18 @@
 </head>
 <body class="body">
   <div class="container">
-    <img id="headerImg" src="./images/bg-desktop-dark.jpg" alt="dark background image" class="header-img">
+    <img id="headerImg" src="https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-dark.jpg?raw=true" alt="dark background image" class="header-img">
     <div class="todo-container">
         <div class="header-container">
           <h2 class="header">Todo</h2>
           <div class="theme-toggle">
-            <img id="themeImage" src="./images/icon-sun.svg" alt="image of the sun">
+            <img id="themeImage" src="https://raw.githubusercontent.com/Olawande-samuel/Todo-list-project/a3fb87b7204b481ef48ff27a963ee263768bedfd/images/icon-sun.svg" alt="image of the sun">
           </div>
         </div>
 
         <form>
           <input type="text" name="todo-list" id="todoEntry" class="todo-entry" placeholder="Enter tasks here">
-          <button class="btn"><i class="fas fa-plus"></i></button>
+          <button class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </form>
       
         <div class="list-container">
@@ -37,7 +37,7 @@
         </div>
 
         <div class="foot-list">
-           <p><!-- Add dynamic number --> <span class="remainder">0</span> items left</p> 
+           <p> <span class="remainder">0</span> items left</p> 
             
            <div class="filter-container">
              <form class="filter-list">
@@ -46,12 +46,6 @@
                <input type="button" value="completed" class="completed">
              </form>
            </div>
-          <!-- <div class="filter-list">
-            <select name="todos" class="filter-todo">
-              <option value="all">All</option>
-              <option value="completed">Completed</option>
-              <option value="uncompleted">Uncompleted</option>
-            </select> -->
          <p class="last-item">Clear Completed</p>
             
             
