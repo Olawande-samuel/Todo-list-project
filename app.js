@@ -166,14 +166,14 @@ function updateTotal() {
 function changeThemes(){
     // change header image
     const headerImg = document.querySelector('.header-img');
-    const darkThemeImage = "http://127.0.0.1:5500/images/bg-desktop-dark.jpg";
-    const lightThemeImage = "http://127.0.0.1:5500/images/bg-desktop-light.jpg";
+    const darkThemeImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-dark.jpg?raw=true";
+    const lightThemeImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-light.jpg?raw=true";
     headerImg.src = (headerImg.src === darkThemeImage)? lightThemeImage : darkThemeImage;
     
     // toggle switch icon
     const themeimg = document.querySelector('#themeImage');
-    const moon = "http://127.0.0.1:5500/images/icon-moon.svg";
-    const sun = "http://127.0.0.1:5500/images/icon-sun.svg";
+    const moon = "https://raw.githubusercontent.com/Olawande-samuel/Todo-list-project/a3fb87b7204b481ef48ff27a963ee263768bedfd/images/icon-moon.svg";
+    const sun = "https://raw.githubusercontent.com/Olawande-samuel/Todo-list-project/a3fb87b7204b481ef48ff27a963ee263768bedfd/images/icon-sun.svg";
     themeimg.src = (themeimg.src === sun)? moon : sun;
 
     // add light-theme class to HTML body
@@ -187,10 +187,10 @@ function changeThemes(){
 function changeImageOnResize() {
     
     const headerImg = document.querySelector('.header-img');
-    const mobileLightImage = "http://127.0.0.1:5500/images/bg-mobile-light.jpg";
-    const mobileDarkImage = "http://127.0.0.1:5500/images/bg-mobile-dark.jpg";
-    const bgdDarkImage = "http://127.0.0.1:5500/images/bg-desktop-dark.jpg";
-    const bgdLightImage = "http://127.0.0.1:5500/images/bg-desktop-light.jpg";
+    const mobileLightImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-mobile-light.jpg?raw=true";
+    const mobileDarkImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-mobile-dark.jpg?raw=true";
+    const bgdDarkImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-dark.jpg?raw=true";
+    const bgdLightImage = "https://github.com/Olawande-samuel/Todo-list-project/blob/master/images/bg-desktop-light.jpg?raw=true";
     
 
     if(windowWidth < 375 && body.classList.contains('light-theme')) {
